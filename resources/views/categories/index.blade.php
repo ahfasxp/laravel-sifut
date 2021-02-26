@@ -44,7 +44,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="6" class="text-center">Tidak Ada Data Categories</td>
+                            <td colspan="4" class="text-center">Tidak Ada Data Categories</td>
                         </tr>
                         @endforelse
                     </tbody>
