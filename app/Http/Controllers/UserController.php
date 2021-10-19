@@ -45,7 +45,7 @@ class UserController extends Controller
             'email' => 'required|string|unique:users',
             'password' => 'required|string'
         ], $messages);
-        
+
         $user = new User;
 
         $user->name = $request->get('name');
@@ -97,22 +97,22 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|string|max:60',
             'photo' => 'nullable|mimes:jpg,png,jpeg'
-            
+
         ], $messages);
 
         $user = User::findOrFail($id);
         $photo = $user->avatar;
-        if($request->file('photo')){                
-            if($user->avatar && file_exists(storage_path('app/public/' . $user->avatar))){         
-                \Storage::delete('public/' . $user->avatar);         
+        if ($request->file('photo')) {
+            if ($user->avatar && file_exists(storage_path('app/public/' . $user->avatar))) {
+                \Storage::delete('public/' . $user->avatar);
             }
             $photo = $request->file('photo')->store('users', 'public');
         }
-        
+
         $user->name = $request->get('name');
         $user->email = $request->get('email');
         $user->role = $request->get('role');
-        if($request->password){
+        if ($request->password) {
             $user->password = \Hash::make($request->get('password'));
         }
         $user->avatar = $photo;
@@ -130,10 +130,15 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::findOrFail($id);
-        if($user->avatar && file_exists(storage_path('app/public/' . $user->avatar))){         
-            \Storage::delete('public/' . $user->avatar);         
+        if ($user->avatar && file_exists(storage_path('app/public/' . $user->avatar))) {
+            \Storage::delete('public/' . $user->avatar);
         }
         $user->delete();
         return redirect()->route('users.index')->withSuccess('User Berhasil dihapus!');
+    }
+
+    public function AuthRouteAPI(Request $request)
+    {
+        return $request->user();
     }
 }

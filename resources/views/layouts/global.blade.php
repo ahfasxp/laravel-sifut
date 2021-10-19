@@ -149,6 +149,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('members.index') }}"
+                                class="nav-link {{ Request::path() == 'members' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-id-card"></i>
+                                <p>
+                                    Manage Members
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('orders.index') }}"
                                 class="nav-link {{ Request::path() == 'orders' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-calendar-alt"></i>

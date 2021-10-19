@@ -12,7 +12,7 @@
         <div class="card">
             <!-- /.card-header -->
             <div class="card-body">
-                <table id="example1" class="table table-striped table-bordered">
+                <table id="example1" class="table table-bordered">
                     <thead>
                         <tr>
                             <th class="text-center">Nama</th>
@@ -86,7 +86,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-3">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a href="{{ route('categories.index') }}" class="btn btn-secondary">Batal</a>
                 </div>
             </form>

@@ -27,7 +27,7 @@
                             <td>{{ $category->description }}</td>
                             <td>Rp. {{ number_format($category->price) }}</td>
                             <td>
-                                <a class="btn btn-info btn-sm" href="{{ route('categories.edit', [$category->id]) }}">
+                                <a class="btn btn-info btn-sm mb-1" href="{{ route('categories.edit', [$category->id]) }}">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
@@ -36,7 +36,7 @@
                                     action="{{ route('categories.destroy', [$category->id]) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">
+                                    <button type="submit" class="btn btn-danger btn-sm mb-1">
                                         <i class="fas fa-trash"></i> Hapus
                                     </button>
                                 </form>

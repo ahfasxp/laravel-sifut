@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableMember extends Migration
+class CreateMembersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,13 @@ class CreateTableMember extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('status')->nullable();
+            $table->bigInteger('customer_id')->unsigned();
+            $table->dateTime('available_at');
+            $table->string('description')->nullable();
+            $table->string('price_free')->nullable();
             $table->timestamps();
+
+            $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
 
