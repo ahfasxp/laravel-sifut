@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', 'HomeController@index');
 
 Auth::routes(['register'=>false]);
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@home')->name('home');
 
     Route::resource('/users', 'UserController')->middleware('can:isAdmin');
 

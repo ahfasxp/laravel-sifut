@@ -24,6 +24,7 @@
                             <p><strong>Berlaku s/d :
                                     {{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}</strong> </p>
                             <p><strong>Harga Free : Rp. {{ $member->price_free }}</strong> </p>
+                            <p><strong>Keterangan : {{ $member->description }}</strong> </p>
                         </div>
                         <!-- /.col -->
                         <div class="col-md-8">
