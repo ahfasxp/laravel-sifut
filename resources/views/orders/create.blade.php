@@ -15,7 +15,7 @@
                 <form role="form" method="POST" action="{{ route('orders.store') }}" id="quickForm">
                     @csrf
                     <div class="form-group">
-                        <label>Nama Pemesan / Tim</label>
+                        <label>Nama Tim</label>
                         <select name="cust" class="form-control select2" style="width: 100%;" required>
                             <option selected="selected" disabled="disabled">Pilih Nama</option>
                             @foreach($customers as $customer)
@@ -37,7 +37,7 @@
                         <!-- /.input group -->
                     </div>
                     <div class="form-group">
-                        <label>Kategori</label>
+                        <label>Kategori Harga</label>
                         <select class="form-control select2" required name="category">
                             <option selected="selected" disabled="disabled">Pilih Kategori</option>
                             @foreach($categories as $category)
@@ -61,7 +61,7 @@
                 <form role="form" method="POST" action="{{ route('customers.store') }}" id="quickForm">
                     @csrf
                     <div class="form-group">
-                        <label for="">Nama Pemain / Tim Baru</label>
+                        <label for="">Nama Tim Baru</label>
                         <input type="text" name="name" class="form-control" id="name" required
                             placeholder="Masukan Nama" autocomplete="off">
                         <p class="text-primary">* Buat baru jika nama pemesan / tim tidak ada</p>
@@ -75,6 +75,15 @@
                         <label for="phone">Telepon</label>
                         <input type="number" name="phone" class="form-control" id="phone" required
                             placeholder="Masukan Telepon" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" name="status">
+                            <option value="UMUM">Umum</option>
+                            <option value="SMA">Pelajar SMA</option>
+                            <option value="SMP">Pelajar SMP</option>
+                            <option value="SD">Pelajar SD</option>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary" name="from" value="orders.create">Submit</button>
                 </form>
