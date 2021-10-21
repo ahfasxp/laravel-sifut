@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
+use App\Member;
+use App\MemberMain;
 use Illuminate\Http\Request;
+use App\Order;
 
 class HomeController extends Controller
 {
@@ -30,8 +34,19 @@ class HomeController extends Controller
         return view('home', compact('harga', 'tim', 'jadwal', 'selesai'));
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('welcome');
+        $schedules = Order::orderBy('created_at', 'ASC')->with('category', 'customer')->where('status', 'schedule')->get();
+
+        if ($request->get('member') != null) {
+            $customer = Customer::where('name', $request->get('member'))->first();
+            if ($customer) {
+                $member = Member::where('customer_id', $customer->id)->first();
+                $memberMains = MemberMain::where('member_id', $member->id)->get();
+
+                return view('welcome', compact('schedules', 'member', 'memberMains'));
+            }
+        }
+        return view('welcome', compact('schedules'));
     }
 }

@@ -81,7 +81,7 @@
                                     @php
                                         $countMain = \App\MemberMain::where('member_id', $member->id)->count();
                                     @endphp
-                                    <td><i class="fas fa-star"></i> {{ $countMain }} x</td>
+                                    <td><i class="fas fa-futbol"></i> {{ $countMain }} x</td>
                                     <td>{{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}</td>
                                     <td>
                                         <a class="btn btn-success btn-sm mb-1"

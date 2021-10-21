@@ -4,6 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url('favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url('favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url('favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url('favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url('favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url('favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url('favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url('favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url('favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url('favicon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
     <title>@yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,16 +64,19 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
                 </li>
             </ul>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        class="nav-link dropdown-toggle">@if(\Auth::user())
-                        {{Auth::user()->name}}
-                        @endif</a>
+                        class="nav-link dropdown-toggle">
+                        @if (\Auth::user())
+                            {{ Auth::user()->name }}
+                        @endif
+                    </a>
                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                         {{-- <li><a href="{{ route('settings.index') }}" class="dropdown-item">Pengaturan</a></li> --}}
                         <li><a href="{{ route('logout') }}" class="dropdown-item"
@@ -76,12 +97,12 @@
         <aside class="main-sidebar sidebar-{{ $tema ?? 'light' }}-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{ route('home') }}" class="brand-link pl-3">
-                @if($image ?? '')
-                <img src="{{ asset('storage/' . $image ?? '') }}" alt="Logo" width="40px" height="40px"
-                    style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
+                @if ($image ?? '')
+                    <img src="{{ asset('storage/' . $image ?? '') }}" alt="Logo" width="40px" height="40px"
+                        style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
                 @else
-                <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" width="50px" height="50px"
-                    style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
+                    <img src="{{ asset('img/logo_tjfutsal_bulat.png') }}" alt="AdminLTE Logo" width="50px"
+                        height="50px" style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
                 @endif
                 <span class="brand-text font-weight-bold">{{ $title ?? 'Si - Futsal' }}</span>
             </a>
@@ -91,16 +112,16 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="pl-3">
-                        @if(Auth::user()->avatar)
-                        <img src="{{ asset('storage/' . Auth::user()->avatar) }}" class="img-circle elevation-2"
-                            alt="User Foto" style="object-fit: cover">
+                        @if (Auth::user()->avatar)
+                            <img src="{{ asset('storage/' . Auth::user()->avatar) }}" class="img-circle elevation-2"
+                                alt="User Foto" style="object-fit: cover">
                         @else
-                        <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                            alt="User Image">
+                            <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                                alt="User Image">
                         @endif
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">{{Auth::user()->name}}</a>
+                        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -121,79 +142,79 @@
                             </a>
                         </li>
                         @can('isAdmin')
-                        <li class="nav-item">
-                            <a href="{{ route('users.index') }}"
-                                class="nav-link {{ Request::path() == 'users' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    Manage Users
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('categories.index') }}"
-                                class="nav-link {{ Request::path() == 'categories' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-dollar-sign"></i>
-                                <p>
-                                    Manage Harga
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('customers.index') }}"
-                                class="nav-link {{ Request::path() == 'customers' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-futbol"></i>
-                                <p>
-                                    Manage Tim
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('members.index') }}"
-                                class="nav-link {{ Request::path() == 'members' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-id-card"></i>
-                                <p>
-                                    Manage Members
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('orders.index') }}"
-                                class="nav-link {{ Request::path() == 'orders' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                <p>
-                                    Manage Jadwal
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('orders.success') }}"
-                                class="nav-link {{ Request::path() == 'orders/success' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-calendar-check"></i>
-                                <p>
-                                    Manage Pertandingan
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="{{ route('users.index') }}"
+                                    class="nav-link {{ Request::path() == 'users' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Manage Users
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('categories.index') }}"
+                                    class="nav-link {{ Request::path() == 'categories' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-dollar-sign"></i>
+                                    <p>
+                                        Manage Harga
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('customers.index') }}"
+                                    class="nav-link {{ Request::path() == 'customers' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-futbol"></i>
+                                    <p>
+                                        Manage Tim
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('members.index') }}"
+                                    class="nav-link {{ Request::path() == 'members' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-id-card"></i>
+                                    <p>
+                                        Manage Members
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('orders.index') }}"
+                                    class="nav-link {{ Request::path() == 'orders' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>
+                                        Manage Jadwal
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('orders.success') }}"
+                                    class="nav-link {{ Request::path() == 'orders/success' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-calendar-check"></i>
+                                    <p>
+                                        Manage Pertandingan
+                                    </p>
+                                </a>
+                            </li>
                         @elsecan('isStaff')
-                        <li class="nav-item">
-                            <a href="{{ route('customers.index') }}"
-                                class="nav-link {{ Request::path() == 'customers' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-futbol"></i>
-                                <p>
-                                    Manage Tim
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('orders.index') }}"
-                                class="nav-link {{ Request::path() == 'orders' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                <p>
-                                    Manage Jadwal
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="{{ route('customers.index') }}"
+                                    class="nav-link {{ Request::path() == 'customers' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-futbol"></i>
+                                    <p>
+                                        Manage Tim
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('orders.index') }}"
+                                    class="nav-link {{ Request::path() == 'orders' ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>
+                                        Manage Jadwal
+                                    </p>
+                                </a>
+                            </li>
                         @endcan
                     </ul>
                 </nav>
@@ -231,7 +252,8 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2020 <a href="https://www.facebook.com/ahfasx.parigy/" target="_blank">Muchamad Ahfas</a>.</strong>
+            <strong>Copyright &copy; 2020 <a href="https://www.facebook.com/ahfasx.parigy/" target="_blank">Muchamad
+                    Ahfas</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.0.5

@@ -4,20 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url('favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url('favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url('favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url('favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url('favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url('favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url('favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url('favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url('favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url('favicon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>SeoGram - SEO Agency Template</title>
+    <title>TJ Futsal Pabedilan</title>
 
     <link rel="stylesheet" href="{{ url('assets/css/maicons.css') }}">
-
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.css') }}">
-
     <link rel="stylesheet" href="{{ url('assets/vendor/animate/animate.css') }}">
-
     <link rel="stylesheet" href="{{ url('assets/css/theme.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .schedule {
+            padding: 8px;
+            text-align: center;
+            color: #645F88;
+        }
+
+    </style>
 
 </head>
 
@@ -29,7 +51,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
             <div class="container">
-                <a href="#" class="navbar-brand">Seo<span class="text-primary">Gram.</span></a>
+                <a href="{{ url('/') }}" class="navbar-brand">
+                    <img src="{{ url('img/logo_tjfutsal.jpg') }}" class="img-fluid" alt="">
+                </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,44 +63,46 @@
                 <div class="navbar-collapse collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#about">About US</a>
+                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="service.html">Gallery</a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#schedule">Schedule</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="service.html">Services</a>
+                            <a class="nav-link" href="#member">Member</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="#find">Find Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ml-lg-2" href="#">Free Analytics</a>
-                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li> --}}
                     </ul>
                 </div>
 
             </div>
         </nav>
 
-        <div class="container">
-            <div class="page-banner home-banner">
+        <div class="container" id="home">
+            <div class="page-banner home-banner bg-primary">
                 <div class="row align-items-center flex-wrap-reverse h-100">
                     <div class="col-md-6 py-5 wow fadeInLeft">
-                        <h1 class="mb-4">Let's Check and Optimize your website!</h1>
-                        <p class="text-lg text-grey mb-5">Ignite the most powerfull growth engine you have ever built
+                        <h1 class="mb-4 text-white">Let's Check and Optimize your website!</h1>
+                        <p class="text-lg text-white mb-5">Ignite the most powerfull growth engine you have ever built
                             for your company</p>
-                        <a href="#" class="btn btn-primary btn-split">Watch Video <div class="fab"><span
-                                    class="mai-play"></span></div></a>
                     </div>
-                    {{-- <div class="col-md-6 py-5 wow zoomIn">
+                    <div class="col-md-6 py-5 wow zoomIn">
                         <div class="img-fluid text-center">
-                            <img src="{{ url('assets/img/banner_image_1.svg') }}" alt="">
+                            <img src="{{ url('img/banner_tjfutsal.png') }}" height="400px" width="400px"
+                                alt="">
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
                 <a href="#about" class="btn-scroll" data-role="smoothscroll"><span
                         class="mai-arrow-down"></span></a>
@@ -84,29 +110,29 @@
         </div>
     </header>
 
-    <div class="page-section" id="about">
+    <div class="page-section pb-0" id="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
                     <span class="subhead">About us</span>
-                    <h2 class="title-section">TJ Futsal Pabedilan</h2>
+                    <h1 class="title-section">TJ Futsal Pabedilan</h1>
                     <div class="divider"></div>
 
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                         ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-                    <a href="about.html" class="btn btn-primary mt-3">Read More</a>
                 </div>
                 <div class="col-lg-6 py-3 wow fadeInRight">
                     <div class="img-fluid py-3 text-center">
-                        <img src="{{ url('assets/img/about_frame.png') }}" alt="">
+                        <img class="img-fluid img-thumbnail" src="{{ url('img/logo_tjfutsal_bulat.png') }}"
+                            alt="">
                     </div>
                 </div>
             </div>
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    <!-- Blog -->
+    {{-- <!-- Blog -->
     <div class="page-section">
         <div class="container">
             <div class="text-center wow fadeInUp">
@@ -163,235 +189,146 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card-service wow fadeInUp">
-                        <div class="header">
-                            <img src="{{ url('assets/img/services/service-1.svg') }}" alt="">
-                        </div>
-                        <div class="body">
-                            <h5 class="text-secondary">SEO Consultancy</h5>
-                            <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                            <a href="service.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card-service wow fadeInUp">
-                        <div class="header">
-                            <img src="{{ url('assets/img/services/service-2.svg') }}" alt="">
-                        </div>
-                        <div class="body">
-                            <h5 class="text-secondary">Content Marketing</h5>
-                            <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                            <a href="service.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card-service wow fadeInUp">
-                        <div class="header">
-                            <img src="{{ url('assets/img/services/service-3.svg') }}" alt="">
-                        </div>
-                        <div class="body">
-                            <h5 class="text-secondary">Keyword Research</h5>
-                            <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                            <a href="service.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-    <div class="page-section bg-light">
+    <div class="page-section bg-light" id="schedule">
         <div class="container">
             <div class="text-center wow fadeInUp">
-                <div class="subhead">Our services</div>
-                <h2 class="title-section">How SEO Team Can Help</h2>
+                <h2 class="title-section">Schedule</h2>
+                <div class="subhead">Jadwal Pertandingan</div>
                 <div class="divider mx-auto"></div>
             </div>
 
             <div class="row">
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
+                <div class="col-md-12 py-3 wow zoomIn">
+                    @forelse($schedules as $schedule)
+                        <div class="row mb-3">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 wow zoomIn">
+                                <div class="schedule bg-primary text-white">
+                                    <i class="far fa-clock"></i>
+                                    {{ Carbon\Carbon::parse($schedule->date)->format('d M, Y (H:i') }}
+                                    WIB)
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-3 wow zoomIn">
+                                <div class="schedule">
+                                    {{ $schedule->customer->name }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-3 wow zoomIn">
+                                <div class="schedule">
+                                    {{ $schedule->description }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-3 wow zoomIn">
+                                <div class="schedule">
+                                    {{ $schedule->customer->address }}
+                                </div>
+                            </div>
                         </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
+                    @empty
+                        <div class="col-md-12 wow zoomIn">
+                            <p class="schedule">
+                                Tidak Ada Jadwal Pertandingan
+                            </p>
                         </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
-                    <div class="features">
-                        <div class="header mb-3">
-                            <span class="mai-business"></span>
-                        </div>
-                        <h5>OnSite SEO</h5>
-                        <p>We analyse your website's structure, internal architecture & other key</p>
-                    </div>
+                    @endforelse
                 </div>
             </div>
-
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    <div class="page-section banner-seo-check">
+    <div class="page-section banner-seo-check" id="member">
         <div class="wrap bg-image" style="background-image: url({{ url('assets/img/bg_pattern.svg') }}">
             <div class="container text-center">
                 <div class="row justify-content-center wow fadeInUp">
                     <div class="col-lg-8">
-                        <h2 class="mb-4">Check your Website SEO</h2>
-                        <form action="#">
-                            <input type="text" class="form-control" placeholder="E.g google.com">
+                        <h2>Member</h2>
+                        <div class="subhead mb-4 text-white">Check Member Tim Kamu</div>
+                        <form action="{{ url('/') }}" method="GET">
+                            <input type="text" class="form-control" name="member"
+                                value="{{ request()->input('member') }}" placeholder="Check Member Kamu Disini">
                             <button type="submit" class="btn btn-success">Check Now</button>
                         </form>
                     </div>
                 </div>
             </div> <!-- .container -->
+            @if (request()->input('member') != null)
+                @if (isset($member) && isset($memberMains))
+                    <div class="container mt-5 wow fadeInUp">
+                        <h2>Detail Member Tim TJ Futsal Pabedilan</h2>
+                        <div class="divider bg-white"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Nama : {{ $member->customer->name }}</p>
+                                <p>Alamat : {{ $member->customer->address }}</p>
+                                <p>Status : {{ $member->customer->status }}</p>
+                                <p>Berlaku s/d : {{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
+                                </p>
+                                <p>Harga Free : {{ $member->price_free }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                @php
+                                    $countMain = \App\MemberMain::where('member_id', $member->id)->count();
+                                @endphp
+                                <p>Jumlah Permainan : <i class="fas fa-futbol"></i> {{ $countMain }} x</p>
+                                @forelse($memberMains as $memberMain)
+                                    <div class="row mb-1">
+                                        <div class="col-sm-6 col-lg-4 col-xl-4 wow zoomIn">
+                                            <div class="schedule text-white bg-secondary">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                {{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-4 col-xl-4 wow zoomIn">
+                                            <div class="schedule text-white">
+                                                {{ $member->customer->name }}
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-4 col-xl-4 wow zoomIn">
+                                            <div class="schedule text-white">
+                                                {{ $memberMain->description }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <div class="col-md-12 wow zoomIn">
+                                        <p class="schedule">
+                                            Belum Ada Permainan
+                                        </p>
+                                    </div>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    <p class="text-center">Member Tidak Ditemukan</p>
+                @endif
+            @endif
+            <div class="container text-center mt-3 wow fadeInDown">
+                <h3>Jadilah Member TJ Futsal Pabedilan, Main 5x Gratis 1x</h3>
+            </div>
         </div> <!-- .wrap -->
     </div> <!-- .page-section -->
 
-    <div class="page-section">
+    <div class="page-section" id="find">
         <div class="container">
             <div class="text-center wow fadeInUp">
-                <div class="subhead">Pricing Plan</div>
-                <h2 class="title-section">Choose plan the right for you</h2>
+                <h2 class="title-section">Find Us</h2>
+                <div class="subhead">Temukan Kami Di Gmaps</div>
                 <div class="divider mx-auto"></div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-4 py-3 wow zoomIn">
-                    <div class="card-pricing">
-                        <div class="header">
-                            <div class="pricing-type">Basic</div>
-                            <div class="price">
-                                <span class="dollar">$</span>
-                                <h1>39<span class="suffix">.99</span></h1>
-                            </div>
-                            <h5>Per Month</h5>
-                        </div>
-                        <div class="body">
-                            <p>25 Analytics <span class="suffix">Campaign</span></p>
-                            <p>1,300 Change <span class="suffix">Keywords</span></p>
-                            <p>Social Media <span class="suffix">Reviews</span></p>
-                            <p>1 Free <span class="suffix">Optimization</span></p>
-                            <p>24/7 <span class="suffix">Support</span></p>
-                        </div>
-                        <div class="footer">
-                            <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
-                        </div>
-                    </div>
+                <div class="col-md-12 py-3 wow zoomIn">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.336323031344!2d108.75674071414403!3d-6.850227368918225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f0652e1d3c6c7%3A0xefcfd6bd8fa68df6!2sTJ%20Futsal%20Pabedilan!5e0!3m2!1sen!2sid!4v1634781913647!5m2!1sen!2sid"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-
-                <div class="col-lg-4 py-3 wow zoomIn">
-                    <div class="card-pricing marked">
-                        <div class="header">
-                            <div class="pricing-type">Standar</div>
-                            <div class="price">
-                                <span class="dollar">$</span>
-                                <h1>59<span class="suffix">.99</span></h1>
-                            </div>
-                            <h5>Per Month</h5>
-                        </div>
-                        <div class="body">
-                            <p>25 Analytics <span class="suffix">Campaign</span></p>
-                            <p>1,300 Change <span class="suffix">Keywords</span></p>
-                            <p>Social Media <span class="suffix">Reviews</span></p>
-                            <p>1 Free <span class="suffix">Optimization</span></p>
-                            <p>24/7 <span class="suffix">Support</span></p>
-                        </div>
-                        <div class="footer">
-                            <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 py-3 wow zoomIn">
-                    <div class="card-pricing">
-                        <div class="header">
-                            <div class="pricing-type">Professional</div>
-                            <div class="price">
-                                <span class="dollar">$</span>
-                                <h1>99<span class="suffix">.99</span></h1>
-                            </div>
-                            <h5>Per Month</h5>
-                        </div>
-                        <div class="body">
-                            <p>25 Analytics <span class="suffix">Campaign</span></p>
-                            <p>1,300 Change <span class="suffix">Keywords</span></p>
-                            <p>Social Media <span class="suffix">Reviews</span></p>
-                            <p>1 Free <span class="suffix">Optimization</span></p>
-                            <p>24/7 <span class="suffix">Support</span></p>
-                        </div>
-                        <div class="footer">
-                            <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    <!-- Banner info -->
+    {{-- <!-- Banner info -->
     <div class="page-section banner-info">
         <div class="wrap bg-image" style="background-image: url({{ url('assets/img/bg_pattern.svg') }}">
             <div class="container">
@@ -423,52 +360,32 @@
                 </div>
             </div>
         </div> <!-- .wrap -->
-    </div> <!-- .page-section -->
+    </div> <!-- .page-section --> --}}
 
     <footer class="page-footer bg-image" style="background-image: url({{ url('assets/img/world_pattern.svg') }}">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-3 py-3">
-                    <h3>SEOGram</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis
-                        in iusto eligendi iure.</p>
-
-                    <div class="social-media-button">
-                        <a href="#"><span class="mai-logo-facebook-f"></span></a>
-                        <a href="#"><span class="mai-logo-twitter"></span></a>
-                        <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-                        <a href="#"><span class="mai-logo-instagram"></span></a>
-                        <a href="#"><span class="mai-logo-youtube"></span></a>
+                    <h3>TJ Futsal Pabedilan</h3>
+                    <p>Jl. Mayor Jendral Sutoyo, Silihasih, Kec. Pabedilan, Cirebon, Jawa Barat 45193</p>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h3>Contact Us</h3>
+                    <div class="social-media-button mb-2">
+                        <a href="#"><span class="mai-logo-whatsapp"></span></a><span class="text-white"> 0821 2720
+                            7087</span>
                     </div>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Company</h5>
-                    <ul class="footer-menu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Help & Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Contact Us</h5>
-                    <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    <a href="#" class="footer-link">+00 1122 3344 5566</a>
-                    <a href="#" class="footer-link">seogram@temporary.com</a>
-                </div>
-                <div class="col-lg-3 py-3">
-                    <h5>Newsletter</h5>
-                    <p>Get updates, news or events on your mail.</p>
-                    <form action="#">
-                        <input type="text" class="form-control" placeholder="Enter your email..">
-                        <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
-                    </form>
+                    <div class="social-media-button mb-2">
+                        <a href="#"><span class="mai-logo-facebook-f"></span></a><span class="text-white"> TJ
+                            Futsal Pabedilan</span>
+                    </div>
+                    <div class="social-media-button mb-2">
+                        <a href="#"><span class="mai-map"></span></a><span class="text-white"> TJ
+                            Futsal Pabedilan</span>
+                    </div>
+
                 </div>
             </div>
-
-            <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a
-                    href="https://macodeid.com/" target="_blank">MACode ID</a></p>
         </div>
     </footer>
 
