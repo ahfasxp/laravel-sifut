@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+    <title>TJ Futsal Pabedilan</title>
+    <meta name="description" content="Arena Futsal di Kecamatan Pabedilan">
+
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url('favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ url('favicon/apple-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url('favicon/apple-icon-72x72.png') }}">
@@ -23,8 +26,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ url('favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-
-    <title>TJ Futsal Pabedilan</title>
 
     <link rel="stylesheet" href="{{ url('assets/css/maicons.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.css') }}">
