@@ -259,7 +259,7 @@
                         <h2>Detail Member Tim TJ Futsal Pabedilan</h2>
                         <div class="divider bg-white"></div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <p>Nama : {{ $member->customer->name }}</p>
                                 <p>Alamat : {{ $member->customer->address }}</p>
                                 <p>Status : {{ $member->customer->status }}</p>
@@ -267,7 +267,7 @@
                                 </p>
                                 <p>Harga Free : {{ $member->price_free }}</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 @php
                                     $countMain = \App\MemberMain::where('member_id', $member->id)->count();
                                 @endphp
@@ -277,7 +277,7 @@
                                         <div class="col-sm-6 col-lg-4 col-xl-4 wow zoomIn">
                                             <div class="schedule text-white bg-secondary">
                                                 <i class="fas fa-calendar-alt"></i>
-                                                {{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
+                                                {{ Carbon\Carbon::parse($memberMain->date)->format('d-m-Y') }}
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-lg-4 col-xl-4 wow zoomIn">

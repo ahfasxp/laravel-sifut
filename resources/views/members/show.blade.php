@@ -28,6 +28,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-md-8">
+                            <h3>Tambah Main</h3>
                             <form role="form" method="POST" action="{{ url('members/addMain') }}" id="quickForm">
                                 @csrf
                                 <!-- Date dd/mm/yyyy -->
@@ -69,7 +70,7 @@
                                         @forelse($memberMains as $memberMain)
                                             <tr class="text-center">
                                                 <td>{{ $memberMain->member->customer->name }}</td>
-                                                <td>{{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
+                                                <td>{{ Carbon\Carbon::parse($memberMain->date)->format('d-m-Y') }}
                                                 </td>
                                                 <td>{{ $memberMain->description }}</td>
                                                 <td>
