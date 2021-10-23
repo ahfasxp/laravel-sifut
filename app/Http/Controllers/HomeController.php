@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        $schedules = Order::orderBy('created_at', 'ASC')->with('category', 'customer')->where('status', 'schedule')->get();
+        $schedules = Order::orderBy('date', 'ASC')->with('category', 'customer')->where('status', 'schedule')->get();
 
         if ($request->get('member') != null) {
             $customer = Customer::where('name', $request->get('member'))->first();
