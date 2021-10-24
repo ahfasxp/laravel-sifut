@@ -16,7 +16,7 @@ class CreateMemberMainsTable extends Migration
         Schema::create('member_mains', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('member_id')->unsigned();
-            $table->dateTime('date')->unique();
+            $table->dateTime('date');
             $table->string('description')->nullable();
             $table->timestamps();
 
