@@ -100,8 +100,7 @@
                     </div>
                     <div class="col-md-6 py-5 wow zoomIn">
                         <div class="img-fluid text-center">
-                            <img src="{{ url('img/banner_tjfutsal.png') }}" height="400px" width="400px"
-                                alt="">
+                            <img src="{{ url('img/banner_tjfutsal.png') }}" height="400px" width="400px" alt="">
                         </div>
                     </div>
                 </div>
@@ -125,8 +124,7 @@
                 </div>
                 <div class="col-lg-6 py-3 wow fadeInRight">
                     <div class="img-fluid py-3 text-center">
-                        <img class="img-fluid img-thumbnail" src="{{ url('img/logo_tjfutsal_bulat.png') }}"
-                            alt="">
+                        <img class="img-fluid img-thumbnail" src="{{ url('img/logo_tjfutsal_bulat.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -387,6 +385,8 @@
 
                 </div>
             </div>
+            <p class="text-center" id="copyright">Copyright &copy; 2021. TJ Futsal Pabedilan - Made with <i
+                    class="fas fa-heart"></i> By Ahfas</p>
         </div>
     </footer>
 
