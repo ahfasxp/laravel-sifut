@@ -69,9 +69,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Us</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link" href="service.html">Gallery</a>
-                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#schedule">Schedule</a>
                         </li>
@@ -131,64 +131,72 @@
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    {{-- <!-- Blog -->
-    <div class="page-section">
+    <div class="page-section" id="pricing">
         <div class="container">
             <div class="text-center wow fadeInUp">
-                <div class="subhead">Galeri</div>
-                <h2 class="title-section">Read Latest News</h2>
+                <h2 class="title-section">Pricing</h2>
+                <div class="subhead">Daftar Harga</div>
                 <div class="divider mx-auto"></div>
             </div>
-
             <div class="row mt-5">
-                <div class="col-lg-4 py-3 wow fadeInUp">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="{{ url('assets/img/blog/blog-1.jpg') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
-                            <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 py-3 wow fadeInUp">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="{{ url('assets/img/blog/blog-2.jpg') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
-                            <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 py-3 wow fadeInUp">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="{{ url('assets/img/blog/blog-3.jpg') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
-                            <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 mt-4 text-center wow fadeInUp">
-                    <a href="blog.html" class="btn btn-primary">View More</a>
+                <div class="col-md-12 py-3 wow zoomIn">
+                    <table class="table text-center table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="3">DAFTAR HARGA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">
+                                    UMUM
+                                </th>
+                                <td>08.00 - 16.00</td>
+                                <td>Rp. 80.000</td>
+                            </tr>
+                            <tr>
+                                <td>16.00 - 24.00</td>
+                                <td>Rp. 100.000</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">
+                                    Pelajar SMA
+                                </th>
+                                <td>08.00 - 16.00</td>
+                                <td>Rp. 70.000</td>
+                            </tr>
+                            <tr>
+                                <td>16.00 - 24.00</td>
+                                <td>Rp. 90.000</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">
+                                    Pelajar SMP
+                                </th>
+                                <td>08.00 - 16.00</td>
+                                <td>Rp. 60.000</td>
+                            </tr>
+                            <tr>
+                                <td>16.00 - 24.00</td>
+                                <td>Rp. 80.000</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">
+                                    Pelajar SD
+                                </th>
+                                <td>08.00 - 16.00</td>
+                                <td>Rp. 50.000</td>
+                            </tr>
+                            <tr>
+                                <td>16.00 - 24.00</td>
+                                <td>Rp. 70.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </div> --}}
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
 
     <div class="page-section bg-light" id="schedule">
         <div class="container">
