@@ -94,7 +94,7 @@
                             </option>
                             <option value="SMP" {{ $update->status == 'SMP' ? 'selected' : '' }}>Pelajar SMP
                             </option>
-                            <option value="SD" {{ $update->status == 'SD' ? 'selected' : '' }}>Pelajar SMP
+                            <option value="SD" {{ $update->status == 'SD' ? 'selected' : '' }}>Pelajar SD
                             </option>
                         </select>
                     </div>

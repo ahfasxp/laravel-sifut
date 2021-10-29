@@ -122,6 +122,8 @@ class MemberController extends Controller
     public function destroy($id)
     {
         $member = Member::findOrFail($id);
+        $memberMains = MemberMain::where('member_id', $member->id);
+        $memberMains->delete();
         $member->delete();
 
         return redirect()->route('members.index')->withSuccess('Member Berhasil dihapus!');

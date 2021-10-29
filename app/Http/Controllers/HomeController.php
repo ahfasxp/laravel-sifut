@@ -38,15 +38,14 @@ class HomeController extends Controller
     {
         $schedules = Order::orderBy('date', 'ASC')->with('category', 'customer')->where('status', 'schedule')->get();
 
-        if ($request->get('member') != null) {
+        try {
             $customer = Customer::where('name', $request->get('member'))->first();
-            if ($customer) {
-                $member = Member::where('customer_id', $customer->id)->first();
-                $memberMains = MemberMain::where('member_id', $member->id)->get();
+            $member = Member::where('customer_id', $customer->id)->first();
+            $memberMains = MemberMain::where('member_id', $member->id)->orderBy('date','ASC')->get();
 
-                return view('welcome', compact('schedules', 'member', 'memberMains'));
-            }
+            return view('welcome', compact('schedules', 'member', 'memberMains'));
+        } catch (\Throwable $th) {
+            return view('welcome', compact('schedules'));
         }
-        return view('welcome', compact('schedules'));
     }
 }
