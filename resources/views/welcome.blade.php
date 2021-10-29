@@ -255,7 +255,7 @@
                         <form action="{{ url('/') }}" method="GET">
                             <input type="text" class="form-control" name="member"
                                 value="{{ request()->input('member') }}" placeholder="Check Member Kamu Disini">
-                            <button type="submit" class="btn btn-success">Check Now</button>
+                            <button type="submit" class="btn btn-success">Check</button>
                         </form>
                     </div>
                 </div>
