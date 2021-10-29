@@ -271,6 +271,8 @@
                                 <p>Alamat : {{ $member->customer->address }}</p>
                                 <p>Status : {{ $member->customer->status }}</p>
                                 <p>Berlaku s/d : {{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
+                                    <span
+                                        class="badge bg-danger {{ date('Y-m-d H:i:s') > $member->available_at ? '' : 'd-none' }}">Expire</span>
                                 </p>
                                 <p>Harga Free : {{ $member->price_free }}</p>
                             </div>
