@@ -15,6 +15,12 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    @if (Session::has('msg'))
+                        <div class="alert alert-danger" role="alert">
+                            <strong>{{ Session::get('msg') }}</strong>
+                        </div>
+                        {{ Session::forget('msg') }}
+                    @endif
                     <div class="row">
                         <div class="col-md-6 p-3">
                             <form role="form" method="POST" action="{{ route('members.store') }}" id="quickForm">

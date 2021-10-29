@@ -44,25 +44,30 @@ class MemberController extends Controller
         $member->available_at = $request->get('date');
         $member->description = $request->get('desc');
 
-        $getStatus = $member->customer->status;
-        switch ($getStatus) {
-            case 'UMUM':
-                $priceFree = '80.000';
-                break;
-            case 'SMA':
-                $priceFree = '70.000';
-                break;
-            case 'SMP':
-                $priceFree = '60.000';
-                break;
-            case 'SD':
-                $priceFree = '50.000';
-                break;
-            default:
-                break;
+        try {
+            $getStatus = $member->customer->status;
+            switch ($getStatus) {
+                case 'UMUM':
+                    $priceFree = '80.000';
+                    break;
+                case 'SMA':
+                    $priceFree = '70.000';
+                    break;
+                case 'SMP':
+                    $priceFree = '60.000';
+                    break;
+                case 'SD':
+                    $priceFree = '50.000';
+                    break;
+                default:
+                    break;
+            }
+
+            $member->price_free = $priceFree;
+        } catch (\Throwable $th) {
+            return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
         }
 
-        $member->price_free = $priceFree;
         $member->save();
         return redirect()->route('members.index')->withSuccess('Member Berhasil ditambahkan!');
     }
