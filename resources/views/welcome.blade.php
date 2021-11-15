@@ -94,9 +94,8 @@
             <div class="page-banner home-banner bg-primary">
                 <div class="row align-items-center flex-wrap-reverse h-100">
                     <div class="col-md-6 py-5 wow fadeInLeft">
-                        <h1 class="mb-4 text-white">Let's Check and Optimize your website!</h1>
-                        <p class="text-lg text-white mb-5">Ignite the most powerfull growth engine you have ever built
-                            for your company</p>
+                        <h1 class="mb-4 text-white">Ayo bermain bersama tim kamu di TJ Futsal Pabedilan!</h1>
+                        <p class="text-lg text-white mb-5">Kemenangan adalah bonus dari setiap pertandingan, namun proses latihanlah yang akan membuat tim berkembang.</p>
                     </div>
                     <div class="col-md-6 py-5 wow zoomIn">
                         <div class="img-fluid text-center">
@@ -118,9 +117,7 @@
                     <h1 class="title-section">TJ Futsal Pabedilan</h1>
                     <div class="divider"></div>
 
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                    <p>TJ Futsal pabedilan berdiri pada tahun 2011,tepatnya pembukaan tgl 18 Juli 2011.dengan lapangan futsal memakai rumput sintetis dengan komposisi,spon,pasir laut,fiber dan tentunya rumput sintetis dengan kualitas no 1 dan di kerjakan oleh tenaga ahli di bidang nya,yang meminimalisir cedera bila terjatuh.TJ Futsal pabedilan sering juga mengadakan turnamen dan juga piala bergilir.supaya terlihat dan muncul bibit bibit pemain futsal yang hebat dan handal.</p>
                 </div>
                 <div class="col-lg-6 py-3 wow fadeInRight">
                     <div class="img-fluid py-3 text-center">
