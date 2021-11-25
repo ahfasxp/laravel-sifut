@@ -47,9 +47,9 @@ class CustomerController extends Controller
         $customer->status = $request->get('status');
         $customer->save();
 
-        if($request->from == 'customers.index'){
+        if ($request->from == 'customers.index') {
             return redirect()->route('customers.index')->withSuccess('Tim Berhasil ditambahkan!');
-        }else{
+        } else {
             return redirect()->route('orders.create')->withSuccess('Tim Berhasil ditambahkan!');
         }
     }
@@ -89,7 +89,7 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'unique:customers',
+            'name' => 'unique:customers,name,' . $request->get('name'),
         ]);
 
         $customer = Customer::findOrFail($id);
