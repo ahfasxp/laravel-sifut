@@ -89,7 +89,7 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'unique:customers,name,' . $request->get('name'),
+            'name' => 'unique:customers,name,' . $id,
         ]);
 
         $customer = Customer::findOrFail($id);
