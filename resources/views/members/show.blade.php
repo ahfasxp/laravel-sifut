@@ -37,7 +37,7 @@
                             @elseif ($countMain >= 5)
                                 <p>Tim Mendapatkan Free 1x Main</p>
                                 <a href="{{ url('members/finished', [$member->id]) }}"
-                                    class="btn btn-info mr-3">Selesaikan Member</a>
+                                    class="btn btn-info mr-3 mb-3">Selesaikan Member</a>
                             @else
                                 <h3>Tambah Main</h3>
                                 <form role="form" method="POST" action="{{ url('members/addMain') }}" id="quickForm">
