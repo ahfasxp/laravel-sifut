@@ -87,32 +87,43 @@
                                     @php
                                         $countMain = \App\MemberMain::where('member_id', $member->id)->count();
                                     @endphp
-                                    <td><i class="fas fa-futbol"></i> {{ $countMain }} x</td>
+                                    <td><i class="fas fa-futbol"></i> {{ $countMain }} x <span
+                                            class="badge bg-info {{ $countMain >= 5 ? '' : 'd-none' }}">Free</span>
+                                    </td>
                                     <td>{{ Carbon\Carbon::parse($member->available_at)->format('d-m-Y') }}
                                         <span
                                             class="badge bg-danger {{ date('Y-m-d H:i:s') > $member->available_at ? '' : 'd-none' }}">Expire</span>
                                     </td>
                                     <td>
-                                        <a class="btn btn-success btn-sm mb-1"
-                                            href="{{ route('members.show', [$member->id]) }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Lihat
-                                        </a>
-                                        <a class="btn btn-info btn-sm mb-1"
-                                            href="{{ route('members.edit', [$member->id]) }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Edit
-                                        </a>
-                                        <form class="d-inline swalDeleteConfirm"
-                                            action="{{ route('members.destroy', [$member->id]) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm mb-1">
-                                                <i class="fas fa-trash"></i> Hapus
-                                            </button>
-                                        </form>
+                                        @if ($member->status == 'finished')
+                                            <a class="btn btn-success btn-sm mb-1"
+                                                href="{{ route('members.show', [$member->id]) }}">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Member Sudah Selesai
+                                            </a>
+                                        @else
+                                            <a class="btn btn-success btn-sm mb-1"
+                                                href="{{ route('members.show', [$member->id]) }}">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Lihat
+                                            </a>
+                                            <a class="btn btn-info btn-sm mb-1"
+                                                href="{{ route('members.edit', [$member->id]) }}">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <form class="d-inline swalDeleteConfirm"
+                                                action="{{ route('members.destroy', [$member->id]) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm mb-1">
+                                                    <i class="fas fa-trash"></i> Hapus
+                                                </button>
+                                            </form>
+                                        @endif
                                     </td>
                                 </tr>
                             @empty

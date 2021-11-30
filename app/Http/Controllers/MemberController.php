@@ -151,4 +151,13 @@ class MemberController extends Controller
 
         return redirect()->back()->withSuccess('Member Berhasil dihapus!');
     }
+
+    public function finishedMember($id)
+    {
+        $member = Member::findOrFail($id);
+        $member->status = 'finished';
+        $member->save();
+
+        return redirect()->back()->withSuccess('Member Berhasil diselesaikan!');
+    }
 }

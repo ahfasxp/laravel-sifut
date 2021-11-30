@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/members/addMain', 'MemberController@addMainMember');
 
     Route::delete('/members/deleteMain/{id}', 'MemberController@deleteMainMember');
+    Route::get('/members/finished/{id}', 'MemberController@finishedMember');
     Route::resource('/members', 'MemberController');
 
     /* Route::get('settings', "SettingController@index")->name('settings.index')->middleware('can:isAdmin');

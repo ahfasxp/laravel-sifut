@@ -28,58 +28,66 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-md-8">
-                            <h3>Tambah Main</h3>
-                            <form role="form" method="POST" action="{{ url('members/addMain') }}" id="quickForm">
-                                @csrf
-                                <!-- Date dd/mm/yyyy -->
-                                <div class="form-group">
-                                    <input type="hidden" name="memberId" value="{{ $member->id }}">
-                                    <label>Tanggal Bermain</label>
-                                    @php
-                                        $now = date('Y-m-d H:i:s');
-                                    @endphp
-                                    <div class="input-group">
-                                        <input type="date" class="form-control"
-                                            value="{{ Carbon\Carbon::parse($now)->format('Y-m-d') }}" name="date" required
-                                            autoclose="true">
-                                    </div>
+                            @php
+                                $countMain = \App\MemberMain::where('member_id', $member->id)->count();
+                            @endphp
+                            @if ($member->status == 'finished')
+                                <h3>Member Sudah Selesai</h3>
+
+                            @elseif ($countMain >= 5)
+                                <p>Tim Mendapatkan Free 1x Main</p>
+                                <a href="{{ url('members/finished', [$member->id]) }}"
+                                    class="btn btn-info mr-3">Selesaikan Member</a>
+                            @else
+                                <h3>Tambah Main</h3>
+                                <form role="form" method="POST" action="{{ url('members/addMain') }}" id="quickForm">
+                                    @csrf
+                                    <!-- Date dd/mm/yyyy -->
                                     <div class="form-group">
-                                        <label for="">Keterangan</label>
-                                        <textarea name="desc" class="form-control" required
-                                            placeholder="Masukan Keterangan"
-                                            autocomplete="off">{{ old('desc') }}</textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mr-3" name="status"
-                                        value="schedule">Submit</button>
-                            </form>
+                                        <input type="hidden" name="memberId" value="{{ $member->id }}">
+                                        <label>Tanggal Bermain</label>
+                                        @php
+                                            $now = date('Y-m-d H:i:s');
+                                        @endphp
+                                        <div class="input-group">
+                                            <input type="date" class="form-control"
+                                                value="{{ Carbon\Carbon::parse($now)->format('Y-m-d') }}" name="date"
+                                                required autoclose="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Keterangan</label>
+                                            <textarea name="desc" class="form-control" required
+                                                placeholder="Masukan Keterangan"
+                                                autocomplete="off">{{ old('desc') }}</textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-3">Submit</button>
+                                </form>
+                            @endif
                         </div>
                         <!-- /.col -->
                     </div>
-                        <div class="col-md-12">
-                            <div class="table-responsive">
-                                <table id="example1" class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">Nama</th>
-                                            <th class="text-center">Tanggal</th>
-                                            <th class="text-center">Keterangan</th>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Nama</th>
+                                        <th class="text-center">Tanggal</th>
+                                        <th class="text-center">Keterangan</th>
+                                        @if ($member->status != 'finished')
                                             <th class="text-center">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @forelse($memberMains as $memberMain)
-                                            <tr class="text-center">
-                                                <td>{{ $memberMain->member->customer->name }}</td>
-                                                <td>{{ Carbon\Carbon::parse($memberMain->date)->format('d-m-Y') }}
-                                                </td>
-                                                <td>{{ $memberMain->description }}</td>
+                                        @endif
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse($memberMains as $memberMain)
+                                        <tr class="text-center">
+                                            <td>{{ $memberMain->member->customer->name }}</td>
+                                            <td>{{ Carbon\Carbon::parse($memberMain->date)->format('d-m-Y') }}
+                                            </td>
+                                            <td>{{ $memberMain->description }}</td>
+                                            @if ($member->status != 'finished')
                                                 <td>
-                                                    {{-- <a class="btn btn-info btn-sm mb-1"
-                                                        href="{{ url('members/editMain', [$memberMain->id]) }}">
-                                                        <i class="fas fa-pencil-alt">
-                                                        </i>
-                                                        Edit
-                                                    </a> --}}
                                                     <form class="d-inline swalDeleteConfirm"
                                                         action="{{ url('members/deleteMain', [$memberMain->id]) }}"
                                                         method="POST">
@@ -90,16 +98,17 @@
                                                         </button>
                                                     </form>
                                                 </td>
-                                            </tr>
-                                        @empty
-                                            <tr>
-                                                <td colspan="4" class="text-center">Tidak Ada data main</td>
-                                            </tr>
-                                        @endforelse
-                                    </tbody>
-                                </table>
-                            </div>
+                                            @endif
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="4" class="text-center">Tidak Ada data main</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>

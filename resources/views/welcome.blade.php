@@ -95,7 +95,8 @@
                 <div class="row align-items-center flex-wrap-reverse h-100">
                     <div class="col-md-6 py-5 wow fadeInLeft">
                         <h1 class="mb-4 text-white">Ayo bermain bersama tim kamu di TJ Futsal Pabedilan!</h1>
-                        <p class="text-lg text-white mb-5">Kemenangan adalah bonus dari setiap pertandingan, namun proses latihanlah yang akan membuat tim berkembang.</p>
+                        <p class="text-lg text-white mb-5">Kemenangan adalah bonus dari setiap pertandingan, namun
+                            proses latihanlah yang akan membuat tim berkembang.</p>
                     </div>
                     <div class="col-md-6 py-5 wow zoomIn">
                         <div class="img-fluid text-center">
@@ -117,7 +118,11 @@
                     <h1 class="title-section">TJ Futsal Pabedilan</h1>
                     <div class="divider"></div>
 
-                    <p>TJ Futsal pabedilan berdiri pada tahun 2011,tepatnya pembukaan tgl 18 Juli 2011.dengan lapangan futsal memakai rumput sintetis dengan komposisi,spon,pasir laut,fiber dan tentunya rumput sintetis dengan kualitas no 1 dan di kerjakan oleh tenaga ahli di bidang nya,yang meminimalisir cedera bila terjatuh.TJ Futsal pabedilan sering juga mengadakan turnamen dan juga piala bergilir.supaya terlihat dan muncul bibit bibit pemain futsal yang hebat dan handal.</p>
+                    <p>TJ Futsal pabedilan berdiri pada tahun 2011, tepatnya pembukaan tgl 18 Juli 2011. Dengan lapangan
+                        futsal memakai rumput sintetis dengan komposisi, spon, pasir laut, fiber dan tentunya rumput
+                        sintetis dengan kualitas no 1 dan di kerjakan oleh tenaga ahli di bidang nya, yang meminimalisir
+                        cidera bila terjatuh. TJ Futsal pabedilan sering juga mengadakan turnamen dan juga piala
+                        bergilir. Supaya terlihat dan muncul bibit bibit pemain futsal yang hebat dan handal.</p>
                 </div>
                 <div class="col-lg-6 py-3 wow fadeInRight">
                     <div class="img-fluid py-3 text-center">
@@ -304,6 +309,11 @@
                                         </p>
                                     </div>
                                 @endforelse
+                                @if ($countMain >= 5)
+                                    <div class="alert alert-info text-center" role="alert">
+                                        Selamat, Kamu Mendapatkan Free 1x Main !!!
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
