@@ -40,7 +40,7 @@ class HomeController extends Controller
 
         try {
             $customer = Customer::where('name', $request->get('member'))->first();
-            $member = Member::where('customer_id', $customer->id)->whereIn('status', ['Null', 'actived'])->orderBy('available_at','DESC')->first();
+            $member = Member::where('customer_id', $customer->id)->where('status', 'actived')->orderBy('available_at','DESC')->first();
             $memberMains = MemberMain::where('member_id', $member->id)->orderBy('date','ASC')->get();
 
             return view('welcome', compact('schedules', 'member', 'memberMains'));
