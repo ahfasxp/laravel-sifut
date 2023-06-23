@@ -123,7 +123,6 @@ class CustomerController extends Controller
 
                 $member->price_free = $priceFree;
                 $member->save();
-                dd($member);
             }
         } catch (\Throwable $th) {
             return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
