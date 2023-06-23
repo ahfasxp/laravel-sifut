@@ -101,7 +101,8 @@ class CustomerController extends Controller
         $customer->status = $request->get('status');
 
         try {
-            $member = Member::where('customer_id', $customer->id)->first();
+            $member = Member::where('customer_id', $id)->first();
+            dd($member);
             if ($member) {
                 $getStatus = $member->customer->status;
                 switch ($getStatus) {
