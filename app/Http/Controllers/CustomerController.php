@@ -102,7 +102,6 @@ class CustomerController extends Controller
 
         try {
             $member = Member::where('customer_id', $id)->first();
-            dd($member);
             if ($member) {
                 $getStatus = $member->customer->status;
                 switch ($getStatus) {
@@ -124,6 +123,7 @@ class CustomerController extends Controller
 
                 $member->price_free = $priceFree;
                 $member->save();
+                dd($member);
             }
         } catch (\Throwable $th) {
             return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
