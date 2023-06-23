@@ -119,10 +119,10 @@ class CustomerController extends Controller
                     break;
                 default:
                     break;
-            }
+                }
 
-            $member->price_free = $priceFree;
-            $member->save;
+                $member->price_free = $priceFree;
+                $member->save();
             }
         } catch (\Throwable $th) {
             return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
