@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+use App\Member;
 
 class CustomerController extends Controller
 {
@@ -98,6 +99,34 @@ class CustomerController extends Controller
         $customer->address = $request->get('address');
         $customer->phone = $request->get('phone');
         $customer->status = $request->get('status');
+
+        try {
+            $member = Member::where('customer_id', $customer->id)->first();
+            if ($member) {
+                $getStatus = $member->customer->status;
+                switch ($getStatus) {
+                case 'UMUM':
+                    $priceFree = '80.000';
+                    break;
+                case 'SMA':
+                    $priceFree = '70.000';
+                    break;
+                case 'SMP':
+                    $priceFree = '60.000';
+                    break;
+                case 'SD':
+                    $priceFree = '50.000';
+                    break;
+                default:
+                    break;
+            }
+
+            $member->price_free = $priceFree;
+            $member->save;
+            }
+        } catch (\Throwable $th) {
+            return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
+        }
 
         $customer->save();
         return redirect()->route('customers.index')->withSuccess('Tim Berhasil diedit!');
