@@ -99,6 +99,7 @@ class CustomerController extends Controller
         $customer->address = $request->get('address');
         $customer->phone = $request->get('phone');
         $customer->status = $request->get('status');
+        $customer->save();
 
         try {
             $member = Member::where('customer_id', $id)->first();
@@ -128,7 +129,7 @@ class CustomerController extends Controller
             return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
         }
 
-        $customer->save();
+       
         return redirect()->route('customers.index')->withSuccess('Tim Berhasil diedit!');
     }
 
