@@ -102,7 +102,7 @@ class CustomerController extends Controller
         $customer->save();
 
         try {
-            $member = Member::where('customer_id', $id)->first();
+            $member = Member::where('customer_id', $id)->get()->last();
             if ($member) {
                 $getStatus = $member->customer->status;
                 switch ($getStatus) {
