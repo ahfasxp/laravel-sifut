@@ -276,7 +276,6 @@
                                     <span
                                         class="badge bg-danger {{ date('Y-m-d H:i:s') > $member->available_at ? '' : 'd-none' }}">Expire</span>
                                 </p>
-                                <p>Harga Free : {{ $member->price_free }}</p>
                             </div>
                             <div class="col-md-8">
                                 @php
