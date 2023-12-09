@@ -153,45 +153,45 @@
                                 <th rowspan="2" style="vertical-align: middle;">
                                     UMUM
                                 </th>
-                                <td>08.00 - 16.00</td>
-                                <td>Rp. 80.000</td>
+                                <td>08.00 - 17.00</td>
+                                <td>Rp. 100.000</td>
                             </tr>
                             <tr>
-                                <td>16.00 - 24.00</td>
-                                <td>Rp. 100.000</td>
+                                <td>17.00 - 24.00</td>
+                                <td>Rp. 120.000</td>
                             </tr>
                             <tr>
                                 <th rowspan="2" style="vertical-align: middle;">
                                     Pelajar SMA
                                 </th>
-                                <td>08.00 - 16.00</td>
-                                <td>Rp. 70.000</td>
+                                <td>08.00 - 17.00</td>
+                                <td>Rp. 90.000</td>
                             </tr>
                             <tr>
-                                <td>16.00 - 24.00</td>
-                                <td>Rp. 90.000</td>
+                                <td>17.00 - 24.00</td>
+                                <td>Rp. 120.000</td>
                             </tr>
                             <tr>
                                 <th rowspan="2" style="vertical-align: middle;">
                                     Pelajar SMP
                                 </th>
-                                <td>08.00 - 16.00</td>
-                                <td>Rp. 60.000</td>
+                                <td>08.00 - 17.00</td>
+                                <td>Rp. 80.000</td>
                             </tr>
                             <tr>
-                                <td>16.00 - 24.00</td>
-                                <td>Rp. 80.000</td>
+                                <td>17.00 - 24.00</td>
+                                <td>Rp. 120.000</td>
                             </tr>
                             <tr>
                                 <th rowspan="2" style="vertical-align: middle;">
                                     Pelajar SD
                                 </th>
-                                <td>08.00 - 16.00</td>
-                                <td>Rp. 50.000</td>
+                                <td>08.00 - 17.00</td>
+                                <td>Rp. 70.000</td>
                             </tr>
                             <tr>
-                                <td>16.00 - 24.00</td>
-                                <td>Rp. 70.000</td>
+                                <td>17.00 - 24.00</td>
+                                <td>Rp. 120.000</td>
                             </tr>
                         </tbody>
                     </table>
