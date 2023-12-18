@@ -101,34 +101,11 @@ class CustomerController extends Controller
         $customer->status = $request->get('status');
         $customer->save();
 
-        try {
-            $member = Member::where('customer_id', $id)->get()->last();
-            if ($member) {
-                $getStatus = $member->customer->status;
-                switch ($getStatus) {
-                case 'UMUM':
-                    $priceFree = '80.000';
-                    break;
-                case 'SMA':
-                    $priceFree = '70.000';
-                    break;
-                case 'SMP':
-                    $priceFree = '60.000';
-                    break;
-                case 'SD':
-                    $priceFree = '50.000';
-                    break;
-                default:
-                    break;
-                }
-
-                $member->price_free = $priceFree;
-                $member->save();
-            }
-        } catch (\Throwable $th) {
-            return back()->with('msg', 'Status tim ' . $member->customer->name . ' belum diisi, Mohon edit dimanage tim');
+        $member = Member::where('customer_id', $id)->get()->last();
+        if ($member) {
+            $member->price_free = '-';
+            $member->save();
         }
-
        
         return redirect()->route('customers.index')->withSuccess('Tim Berhasil diedit!');
     }
