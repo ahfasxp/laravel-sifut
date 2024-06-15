@@ -122,7 +122,7 @@
                         futsal memakai rumput sintetis dengan komposisi, spon, pasir laut, fiber dan tentunya rumput
                         sintetis dengan kualitas no 1 dan di kerjakan oleh tenaga ahli di bidang nya, yang meminimalisir
                         cidera bila terjatuh. TJ Futsal pabedilan sering juga mengadakan turnamen dan juga piala
-                        bergilir. Supaya terlihat dan muncul bibit bibit pemain futsal yang hebat dan handal.</p>
+                        bergilir. Supaya terlihat dan muncul bibit bibit pemain futsal yang hebat dan handal. TJ Futsal pabedilan telah meng up grade lapangan dengan bahan material interlock berkualitas sehingga minim cidera.</p>
                 </div>
                 <div class="col-lg-6 py-3 wow fadeInRight">
                     <div class="img-fluid py-3 text-center">
