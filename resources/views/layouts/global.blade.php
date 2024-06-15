@@ -103,7 +103,7 @@
                     <img src="{{ asset('storage/' . $image ?? '') }}" alt="Logo" width="40px" height="40px"
                         style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
                 @else
-                    <img src="{{ asset('img/logo_tjfutsal_bulat.png') }}" alt="AdminLTE Logo" width="50px"
+                    <img src="{{ asset('img/logo_tjfutsal_circle.png') }}" alt="AdminLTE Logo" width="50px"
                         height="50px" style="object-fit: cover" class="img-circle elevation-3 mr-1" style="opacity: .8">
                 @endif
                 <span class="brand-text font-weight-bold">{{ $title ?? 'Si - Futsal' }}</span>
