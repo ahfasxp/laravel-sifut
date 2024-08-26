@@ -1,11 +1,5 @@
 <?php
 
-// Temporary fix for older PHP versions that do not support JSON_UNESCAPED_SLASHES.
-// Remove this when upgrading to PHP 5.4 or newer.
-if (!defined('JSON_UNESCAPED_SLASHES')) {
-    define('JSON_UNESCAPED_SLASHES', 64);
-}
-
 return [
 
     /*
