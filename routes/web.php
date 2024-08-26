@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
-// Check PHP Info
-Route::get('/phpinfo', function () {
-    return phpinfo();
-});
-
 Auth::routes(['register'=>false]);
 
 Route::group(['middleware' => 'auth'], function () {
