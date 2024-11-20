@@ -40,6 +40,16 @@
             color: #645F88;
         }
 
+        .price-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .price-table td,
+        .price-table th {
+            padding: 10px;
+            vertical-align: middle;
+        }
     </style>
 
 </head>
@@ -142,7 +152,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-md-12 py-3 wow zoomIn">
-                    <table class="table text-center table-bordered">
+                    <table class="table text-center table-bordered price-table">
                         <thead>
                             <tr>
                                 <th colspan="3">DAFTAR HARGA</th>
@@ -150,9 +160,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th rowspan="2" style="vertical-align: middle;">
-                                    UMUM
-                                </th>
+                                <th rowspan="2">UMUM</th>
                                 <td>08.00 - 17.00</td>
                                 <td>Rp. 100.000</td>
                             </tr>
@@ -161,33 +169,39 @@
                                 <td>Rp. 120.000</td>
                             </tr>
                             <tr>
-                                <th rowspan="2" style="vertical-align: middle;">
-                                    Pelajar SMA
-                                </th>
-                                <td>08.00 - 17.00</td>
+                                <th rowspan="3">Pelajar SMA</th>
+                                <td>08.00 - 15.00</td>
                                 <td>Rp. 90.000</td>
                             </tr>
                             <tr>
+                                <td>16.00</td>
+                                <td>Rp. 100.000</td>
+                            </tr>
+                            <tr>
                                 <td>17.00 - 24.00</td>
                                 <td>Rp. 120.000</td>
                             </tr>
                             <tr>
-                                <th rowspan="2" style="vertical-align: middle;">
-                                    Pelajar SMP
-                                </th>
-                                <td>08.00 - 17.00</td>
+                                <th rowspan="3">Pelajar SMP</th>
+                                <td>08.00 - 15.00</td>
                                 <td>Rp. 80.000</td>
                             </tr>
                             <tr>
+                                <td>16.00</td>
+                                <td>Rp. 100.000</td>
+                            </tr>
+                            <tr>
                                 <td>17.00 - 24.00</td>
                                 <td>Rp. 120.000</td>
                             </tr>
                             <tr>
-                                <th rowspan="2" style="vertical-align: middle;">
-                                    Pelajar SD
-                                </th>
-                                <td>08.00 - 17.00</td>
+                                <th rowspan="3">Pelajar SD</th>
+                                <td>08.00 - 15.00</td>
                                 <td>Rp. 70.000</td>
+                            </tr>
+                            <tr>
+                                <td>16.00</td>
+                                <td>Rp. 100.000</td>
                             </tr>
                             <tr>
                                 <td>17.00 - 24.00</td>
