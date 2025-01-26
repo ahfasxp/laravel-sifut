@@ -401,8 +401,7 @@
                 <div class="col-lg-3 py-3">
                     <h3>Contact Us</h3>
                     <div class="social-media-button mb-2">
-                        <a href="#"><span class="mai-logo-whatsapp"></span></a><span class="text-white"> 0821 2720
-                            7087</span>
+                        <a href="#"><span class="mai-logo-whatsapp"></span></a><span class="text-white"> 082130031485</span>
                     </div>
                     <div class="social-media-button mb-2">
                         <a href="#"><span class="mai-logo-facebook-f"></span></a><span class="text-white"> TJ
